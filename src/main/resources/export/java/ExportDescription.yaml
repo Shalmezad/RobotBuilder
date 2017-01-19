@@ -301,6 +301,14 @@ Instructions:
       public ${ClassName} get#class($Name)() {
               return #variable($Name);
           }
+  XboxController:
+    Defaults: "OI,None"
+    ClassName: "XboxController"
+    Construction: "#variable($Name) = new ${ClassName}(${Number});"
+    Function: >-
+      public ${ClassName} get#class($Name)() {
+              return #variable($Name);
+          }
   Joystick Button:
     Defaults: "Button,OI,None"
     ClassName: "JoystickButton"

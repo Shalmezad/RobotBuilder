@@ -292,6 +292,15 @@ Instructions:
        std::shared_ptr<${ClassName}> OI::get#class($Name)() {
           return #variable($Name);
        }
+  XboxController:
+    Defaults: "OI,None"
+    ClassName: "XboxController"
+    Construction: "#variable($Name).reset(new ${ClassName}(${Number}));"
+    Prototype: "std::shared_ptr<${ClassName}> get#class($Name)();"
+    Function: >-
+       std::shared_ptr<${ClassName}> OI::get#class($Name)() {
+          return #variable($Name);
+       }
   Joystick Button:
     Defaults: "Button,OI,None"
     ClassName: "JoystickButton"
